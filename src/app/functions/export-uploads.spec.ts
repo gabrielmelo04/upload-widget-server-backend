@@ -62,7 +62,7 @@ describe('export uploads', () => {
       reportUrl: 'https://storage.com/file.csv',
     })
     expect(csvAsArray).toEqual([
-      ['ID', 'Name', 'Remote Url', 'Created At'],
+      ['ID', 'Name', 'Url', 'Uploaded at'],
       [upload1.id, upload1.name, upload1.remoteUrl, expect.any(String)],
       [upload2.id, upload2.name, upload2.remoteUrl, expect.any(String)],
       [upload3.id, upload3.name, upload3.remoteUrl, expect.any(String)],
