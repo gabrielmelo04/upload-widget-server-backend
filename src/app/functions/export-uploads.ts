@@ -50,7 +50,7 @@ export async function exportUploads(
     columns: [
       { key: 'id', header: 'ID' },
       { key: 'name', header: 'Name' },
-      { key: 'remote_url', header: 'URL' },
+      { key: 'remote_url', header: 'Url' },
       { key: 'created_at', header: 'Uploaded at' },
     ],
   })
