@@ -6,7 +6,7 @@ import { uploadFileToStorage } from '@/infra/storage/upload-file-to-storage'
 import { type Either, makeRight } from '@/shared/either'
 import { stringify } from 'csv-stringify'
 import { ilike } from 'drizzle-orm'
-import { object, z } from 'zod'
+import { z } from 'zod'
 
 const exportUploadsInput = z.object({
   searchQuery: z.string().optional(),
@@ -50,8 +50,8 @@ export async function exportUploads(
     columns: [
       { key: 'id', header: 'ID' },
       { key: 'name', header: 'Name' },
-      { key: 'remote_url', header: 'Remote Url' },
-      { key: 'created_at', header: 'Created At' },
+      { key: 'remote_url', header: 'URL' },
+      { key: 'created_at', header: 'Uploaded at' },
     ],
   })
 
